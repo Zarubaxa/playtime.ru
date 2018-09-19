@@ -40,6 +40,8 @@
                         </div>
                         <div class="resolution">
                             <h3>Разрешение</h3>
+                            <input type="checkbox">
+                            1212
                         </div>
                     </form>
                 </div>
