@@ -36,12 +36,41 @@
                                 <label>
                                     <input type="checkbox" name="htcvive"> HTC Vive <span class="amount">15</span>
                                 </label>
-                            </label>
+                            </div>
                         </div>
                         <div class="resolution">
                             <h3>Разрешение</h3>
-                            <input type="checkbox">
-                            1212
+                            <label>
+                                <input type="checkbox" name="1920x1080"> 1920x1080 <span class="amount"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="2880x1600"> 2880x1600 <span class="amount"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="2880x1440"> 2880x1440 <span class="amount">14</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="2560x1440"> 2560x1440 <span class="amount">12</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="1280x720"> 1280x720 <span class="amount"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="800x480"> 800x480 <span class="amount"></span>
+                            </label>
+                            <a href="#" class="more">Еще</a>
+                        </div>
+                        <div class="compatibility">
+                            <h3>Совместимость</h3>
+                            <label>
+                                <input type="checkbox" name="pc"> Для ПК <span class="amount">112</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="phones"> Для смартфонов <span class="amount">98</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="consoles"> Для консолей <span class="amount">90</span>
+                            </label>
                         </div>
                     </form>
                 </div>
