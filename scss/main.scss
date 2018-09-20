@@ -245,8 +245,8 @@ header {
 		}
 	}
 	.bottom-nav {
-		height: 70px;
-		line-height: 70px;
+		// height: 70px;
+		// line-height: 70px;
 		ul {
 			li {
 				display: inline-block;
@@ -1193,6 +1193,419 @@ footer {
 		}
 		.dev {
 			text-align: right;
+		}
+	}
+}
+// TODO: ------------------------------------СТРАНИЦА КАТАЛОГА------------------------------//
+
+.main-catalog {
+	padding-top: 63px;
+	padding-bottom: 55px;
+	background-color: #f8f8f8;
+	form {
+		.main-filters {
+			background-color: #fff;
+			padding: 25px 30px 30px 30px;
+
+			h3 {
+				margin-top: 0px;
+				font-size: 16px;
+				color: #87898e;
+				font-family: 'Gotham Pro Bold';
+				margin-bottom: 20px;
+			}
+
+			.cost-block {
+				margin-bottom: 33px;
+				h3 {
+					position: relative;
+				}
+
+				h3:after {
+					position: absolute;
+					content: ' ';
+					right: 0px;
+					top: 7px;
+					display: block;
+					width: 55px;
+					height: 1px;
+					background-color: #eeeeee;
+				}
+
+				input[type="text"] {
+					display: inline-block;
+					width: 82px;
+					height: 31px;
+					border-radius: 4px;
+					background-color: #fff;
+					border: 1px solid #ebebeb;
+					padding: 10px;
+					margin-top: 20px;
+				}
+
+				.divide {
+					display: inline-block;
+					width: 11px;
+					height: 1px;
+					background-color: #e4e4e4;
+					vertical-align: middle;
+					margin: 0 9px;
+				}
+			}
+			label {
+				display: block;
+				color: #b3b6bd;
+				font-size: 14px;
+				font-family: 'Gotham Pro Regular';
+				cursor: pointer;
+
+				input[type="checkbox"] {
+					display: none;
+				}
+
+				.checkbox-custom {
+					position: relative;     
+					width: 20px;            
+					height: 20px;
+					border: 2px solid #ebebeb;
+					border-radius: 3px;
+				}
+				.label {
+					color: #b3b6bd;
+					font-size: 14px;
+					font-family: 'Gotham Pro Regular';
+					
+				}
+			}
+			.checkbox-custom,
+			.label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.checkbox:checked + .checkbox-custom::before {
+				content: "";             /* Добавляем наш псевдоэлемент */
+				display: block;			 /* Делаем его блочным элементом */
+				position: absolute;      /* Позиционируем его абсолютным образом */
+				/* Задаем расстояние от верхней, правой, нижней и левой границы */
+				top: 2px;
+				right: 2px;
+				bottom: 2px;
+				left: 2px;
+				background: url("../img/check-icon.png") no-repeat center center;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+				border-radius: 2px;
+			}
+			.brand-block {
+				margin-bottom: 30px;
+				h3 {
+					position: relative;
+				}
+
+				h3:after {
+					position: absolute;
+					content: ' ';
+					right: 0px;
+					top: 7px;
+					display: block;
+					width: 129px;
+					height: 1px;
+					background-color: #eeeeee;
+				}
+			}
+			.resolution {
+				margin-bottom: 30px;
+
+				.more {
+					position: relative;
+					display: inline-block;
+					margin-top: 22px;
+					font-size: 14px;
+					color: #1d2029;
+					font-family: 'Gotham Pro Regular';
+					border-bottom: 1px dashed #1d2029;
+				}
+
+				.more:after {
+					position: absolute;
+					display: block;
+					content: ' ';
+					background: url(../img/more-icon.png) no-repeat center center;
+					width: 20px;
+					height: 10px;
+					top: 5px;
+					right: -20px;
+				}
+			}
+			.compatibility {
+				h3 {
+					position: relative;
+				}
+
+				h3:after {
+					position: absolute;
+					content: ' ';
+					right: 0px;
+					top: 7px;
+					display: block;
+					width: 50px;
+					height: 1px;
+					background-color: #eeeeee;
+				}
+			}
+		}
+		.catalog-block {
+			.sort-block {
+				.changed-filters {
+					a {
+						display: inline-block;
+						position: relative;
+						width: auto;
+						height: 39px;
+						background-color: #e6e6e6;
+						font-size: 11px;
+						color: #7c7d81;
+						font-family: 'Gotham Pro Regular';
+						padding: 15px 40px 15px 20px;
+						border-radius: 30px;
+
+						.delete {
+							position: absolute;
+							display: inline-block;
+							width: 20px;
+							height: 20px;
+							right: 15px;
+							top: 10px;
+							background: url(../img/delete-icon.png) no-repeat center center;
+						}
+					}
+					.reset-filters {
+						position: unset;
+						width: 95px;
+						border: 1px solid #e00000;
+						color: #e00000;
+						background-color: #fff;
+						text-align: center;
+						padding: 0px;
+						text-align: center;
+						line-height: 42px;
+					}
+					a:not(:last-child) {
+						margin-right: 12px;
+					}
+				}
+
+				.sort-filters {
+					position: relative;
+					z-index: 9;
+
+					select {
+						width: 187px;
+						background-color: #fff;
+						height: 39px;
+						border-radius: 30px;
+						border: 1px solid #dedede;
+						-moz-border-radius: 30px; 
+						-webkit-border-radius: 30px; 
+						-khtml-border-radius: 30px; 
+						padding: 0px 40px 0px 20px;
+						line-height: 42px;
+						color: #7c7d81;
+						font-size: 12px;
+						font-family: 'Gotham Pro Regular';
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						appearance: none;
+					}
+				}
+				.sort-filters:after {
+					display: block;
+					content: ' ';
+					position: absolute;
+					top: 5px;
+					right: 10px;
+					width: 29px;
+					height: 29px;
+					border-radius: 29px;
+					background-color: #5f9422;
+					background-position-x: 10px;
+					z-index: 10;
+					pointer-events: none;
+				}
+
+				.sort-filters:before {
+					position: absolute;
+					display: block;
+					content: ' ';
+					background: url("../img/arrowdown-icon.png") no-repeat center center;
+					top: 15px;
+					right: 15px;
+					z-index: 20;
+					width: 20px;
+					height: 10px;
+					pointer-events: none;
+				}
+			}
+			.items {
+				margin-top: 50px;
+
+				.item {
+					height: 324px;
+					width: 31%;
+					background-color: #fff;
+					position: relative;
+					display: inline-block;
+					margin-bottom: 30px;
+					border-radius: 3px;
+					float: left;
+
+					.about {
+						padding: 0px 30px 0px 30px;
+
+						.description {
+							color: #696b73;
+							font-size: 13px;
+							font-family: 'Gotham Pro Regular';
+							margin: 0px;
+							margin-top: 10px;
+						}
+
+						.block {
+							display: flex;
+							justify-content: space-between;
+							position: absolute;
+							bottom: 20px;
+							width: 100%;
+							left: 0;
+							padding-left: 30px;
+							padding-right: 30px;
+
+							.price {
+								font-size: 15px;
+								color: #5f9422;
+								font-family: 'Gotham Pro Bold';
+								display: inline-block;
+								margin: 0px;
+							}
+							button {
+								display: inline-block;
+								width: 15px;
+								height: 15px;
+								border-radius: 15px;
+								border: none;
+							}
+							.gray {
+								background-color: #7c7c7c;
+							}
+							.red {
+								background-color: #e87e7e;
+							}
+							.light-gray {
+								background-color: #ebebeb;
+							}
+							.orange {
+								background-color: #f9a37e;
+							}
+							.blue {
+								background-color: #7ebae8;
+							}
+						}
+					}
+				}
+				.item:not(:last-child) {
+					margin-right: 25px;
+				}
+				.item:nth-child(3n) {
+					margin-right: 0;
+				}
+				.item > a {
+					display: block;
+					padding: 0px 30px 0px 30px;
+					
+					.img-block {
+						height: 199px;
+
+						img {
+							margin-top: 30px;
+							max-width: 100%;
+						}
+					}
+
+					h3 {
+						font-size: 16px;
+						color: #1d2029;
+						font-family: 'Gotham Pro Bold';
+						margin: 0px;
+					}
+				}
+
+				.item.item-sale + .item {
+					margin-right: 25px;
+				}
+
+				.item.item-sale {
+					width: 65%;
+					margin-right: 0px;
+					background: url("../img/item-banner.png") no-repeat top center;
+
+					a {
+						position: relative;
+						display: block;
+						padding: 0;
+						height: 100%;
+
+						.sale-number {
+							position: absolute;
+							display: block;
+							top: 30px;
+							right: 20px;
+							color: #fdb246;
+							font-size: 87px;
+							font-family: 'Gotham Pro Black';
+						}
+
+						.banner-block {
+							position: absolute;
+							display: block;
+							bottom: 15px;
+							right: 20px;
+
+							h3 {
+								font-size: 18px;
+								color: #ffffff;
+								font-family: 'Gotham Pro Bold';
+							}
+
+							.about {
+								padding: 0;
+								.description {
+									color: #989898;
+									font-size: 13px;
+								}
+
+								.block {
+									position: unset;
+									flex-direction: column;
+									padding: 0;
+									margin-top: 10px;
+
+									.price {
+										font-family: 'Gotham Pro Bold';
+										font-size: 16px;
+										display: block;
+										color: #ffffff;
+									}
+									.old-price {
+										display: block;
+										font-size: 12px;
+										color: #848484;
+										font-family: 'Gotham Pro Regular';
+										text-decoration: line-through;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
